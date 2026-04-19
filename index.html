@@ -52,6 +52,64 @@
         @media (max-width: 900px) { .grid-3 { grid-template-columns: repeat(2,1fr); } .grid-2 { grid-template-columns: 1fr; } }
     </style>
 </head>
+
+<script>
+const GEA_OUTREACH = {
+  outreachPlaybook: {
+    badge: "Cold→Warm",
+    headline: "LEAP supply-chain constraints + FLIGHT DECK model = outsourced engineering demand right now",
+    triggers: [
+      { icon:"⚙️", label:"LEAP-1B Cert & Durability Kit (H1 2026)",
+        body:"LEAP-1B durability kit certification incoming H1 2026. GE ramping supply chain — needs validation engineering, test data management, and compliance documentation.",
+        action:"Email hook: 'LEAP durability kit cert timelines are under scrutiny. We've run certification for CFM-powered platforms and can turn documentation fast. 20-min call?'" },
+      { icon:"🏭", label:"FLIGHT DECK — Embedding Engineers in Supply Base",
+        body:"GE embeds engineers in supplier plants via FLIGHT DECK to drive quality and velocity. Cyient can be a FLIGHT DECK delivery partner — on-site engineering for component suppliers.",
+        action:"Pitch: 'FLIGHT DECK works because engineering is embedded where needed. We've worked Titan (India LPT) and Safran. We can be your FLIGHT DECK partner for [target suppliers].'" },
+      { icon:"🇮🇳", label:"Titan Engineering India — LEAP India Footprint",
+        body:"GE signed Titan Engineering for LEAP LPT component production in India (Feb 2025). India supply-chain is live — engineering support, quality, documentation all needed locally.",
+        action:"India angle: 'Titan LEAP LPT work needs engineering backstop. We're in Hyderabad with AS9100D infrastructure. Let us support Titan ramp.'" },
+      { icon:"🔬", label:"RISE Program — Next-Gen Propulsion 2030s",
+        body:"RISE program with Safran: compact-core turbine testing ongoing. Long-lead engineering — CAD, CFD, mechanical analysis for 2030s platform. Time-zone-continuous development needed.",
+        action:"Technical sell: 'RISE compact-core needs 24/7 engineering velocity. India-based CAD/CFD team at Cyient gives time-zone-continuous development.'" }
+    ],
+    coldToWarm: [
+      { step:1, label:"Signal Monitor", body:"Monitor GE quarterly earnings (LEAP delivery numbers), RISE programme press releases, FLIGHT DECK announcements. Each = outreach trigger." },
+      { step:2, label:"Personalised Email", body:"Reference specific LEAP milestone or FLIGHT DECK news. One sentence on Cyient CFM/Safran credential. No deck on first touch." },
+      { step:3, label:"LinkedIn Outreach", body:"Connect with GE Aerospace supply chain VP and CFM programme contacts. Engage LEAP/RISE content with technical insight." },
+      { step:4, label:"Event Pre-Outreach", body:"2 weeks before Farnborough (Jul 20) or AeroDef (Apr 14): email to schedule show meeting with supply-chain leadership." },
+      { step:5, label:"Warm Meeting", body:"Agenda: LEAP durability cert schedule → Cyient CFM/Safran track record → FLIGHT DECK delivery partnership → RISE CAD/CFD support." }
+    ]
+  },
+  partnerships: [
+    { name:"Safran Aircraft Engines (CFM JV)", type:"50/50 JV", status:"Active — LEAP dominant",
+      desc:"CFM International is the world's largest commercial engine maker. LEAP-1A (A320neo) and LEAP-1B (737 MAX) are the two most-delivered turbofans globally. CFM profitable from 2025.",
+      angle:"LEAP supply-chain engineering, certification documentation, and tech pubs are continuous programs. Cyient Safran relationship is the warm intro path into CFM/GE joint programs." },
+    { name:"Titan Engineering & Automation (India)", type:"Supply Chain", status:"Contract Feb 2025",
+      desc:"GE signed Titan Engineering for LEAP LPT component production in India, Feb 2025. India manufacturing footprint for LEAP now live.",
+      angle:"Titan LEAP work needs engineering support — quality documentation, process engineering, technical publications. Cyient Hyderabad proximity to Titan is the geographic advantage." },
+    { name:"FLIGHT DECK Supply Chain Programme", type:"Engineering Model", status:"Active",
+      desc:"GE embeds engineers in supplier plants to drive quality, manufacturing velocity, and ramp readiness. Model proven at multiple tier-1 and tier-2 suppliers globally.",
+      angle:"Cyient as FLIGHT DECK delivery partner — on-site or remote engineering teams for GE's key suppliers, specifically in India and Asian markets." },
+    { name:"Boeing (LEAP-1B / 737 MAX)", type:"OEM Customer", status:"Active — Production Ramp",
+      desc:"737 MAX rate increase in 2026/2027 drives LEAP-1B demand. GE's engineering bandwidth focused on MAX ramp.",
+      angle:"LEAP-1B ramp = cert documentation, tech pubs, and subsystem engineering demand. Cyient Boeing production contract is warm credentialing for GE conversations." }
+  ],
+  events: [
+    { name:"Farnborough Airshow", date:"July 20–24, 2026", location:"Farnborough, UK",
+      type:"Trade Show", priority:"🔴 MUST",
+      why:"GE Aerospace is a marquee Farnborough exhibitor. Supply chain VP, LEAP programme leadership, and CFM joint-team all attend. Premier access outside Cincinnati HQ." },
+    { name:"AeroDef Manufacturing", date:"Apr 14–16, 2026", location:"Boston, MA",
+      type:"Conference", priority:"🔴 MUST",
+      why:"GE defense (T700, F110, GE9X military) and supply-chain leadership attends. FLIGHT DECK model was launched here — supply-chain engineering pitch lands strongly." },
+    { name:"MRO Americas", date:"Apr 21–23, 2026", location:"Orlando, FL",
+      type:"Trade Show", priority:"🟠 HIGH",
+      why:"CFM services and LEAP overhaul engineering. GE aftermarket and CFM services teams attend. Tech pubs, CMM/IPC documentation, and overhaul engineering angles." },
+    { name:"Paris Air Show", date:"June 2027", location:"Le Bourget, France",
+      type:"Trade Show", priority:"🟡 PLAN AHEAD",
+      why:"GE uses Paris for major LEAP/RISE announcements (alternates with Farnborough). RISE news will accelerate by 2027 — plan presence now." }
+  ]
+};
+</script>
 <body>
 
 <!-- TOPBAR -->
@@ -91,6 +149,18 @@
         <div class="sidebar-item" onclick="switchSection(event,'hiring')">💼 Hiring Intelligence</div>
         <div class="sidebar-item" onclick="switchSection(event,'signals')">📡 Signal Chains</div>
         <div class="sidebar-item" onclick="switchSection(event,'competitive')">⚔️ Competitive Intel</div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Outreach Playbook</div>
+    <div class="sidebar-item" onclick="switchSection(event,'outreach')">🤝 Outreach Playbook <span style="background:#4caf50;color:#fff;padding:2px 7px;border-radius:10px;font-size:10px;font-weight:700;margin-left:4px;">Cold→Warm</span></div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Partnership &amp; Alliances</div>
+    <div class="sidebar-item" onclick="switchSection(event,'partnerships')">🤝 Partnerships &amp; Alliances</div>
+  </div>
+  <div class="sidebar-section">
+    <div class="sidebar-label">Industry Events</div>
+    <div class="sidebar-item" onclick="switchSection(event,'events')">📅 Industry Events</div>
+  </div>
     </div>
     <div class="sidebar-section">
         <div class="sidebar-label">Programs</div>
@@ -669,6 +739,33 @@
 </div>
 
 <!-- ====== COMPETITIVE INTEL ====== -->
+
+<!-- ═══ OUTREACH PLAYBOOK ═══ -->
+<div id="outreach" class="section">
+  <div class="section-title">🤝 Outreach Playbook — <span id="op-headline"></span></div>
+  <div id="op-badge" style="display:inline-block;background:#4caf50;color:#fff;padding:4px 14px;border-radius:20px;font-size:12px;font-weight:700;margin-bottom:22px;"></div>
+  <div id="op-triggers" class="grid-2" style="margin-bottom:28px;"></div>
+  <div class="card" style="border-top-color:#1a1a2e;">
+    <div class="card-title">Cold → Warm: 5-Step Sequence</div>
+    <div id="op-steps"></div>
+  </div>
+</div>
+
+<!-- ═══ PARTNERSHIPS ═══ -->
+<div id="partnerships" class="section">
+  <div class="section-title">🤝 Partnerships &amp; Alliances</div>
+  <div id="pw-cards" class="grid-2"></div>
+</div>
+
+<!-- ═══ EVENTS ═══ -->
+<div id="events" class="section">
+  <div class="section-title">📅 Industry Events — 2026 Calendar</div>
+  <div style="background:#fef3c7;border:1px solid #f59e0b;border-radius:8px;padding:12px 16px;margin-bottom:22px;font-size:12.5px;color:#92400e;">
+    🗓️ <strong>Why events matter:</strong> Pre-event outreach (2 weeks before each show) converts cold emails into scheduled meetings with procurement and engineering leadership.
+  </div>
+  <div id="ev-cards" class="grid-2"></div>
+</div>
+
 <div id="competitive" class="section">
     <div class="section-title">⚔️ Competitive Intelligence</div>
 
@@ -877,5 +974,45 @@ function switchSection(event, sectionId) {
     if (event && event.currentTarget) event.currentTarget.classList.add('active');
 }
 </script>
+
+<script>
+// Outreach / Partnerships / Events render from GEA_OUTREACH
+document.addEventListener('DOMContentLoaded', function() {
+  const d_op = GEA_OUTREACH;
+  const op = d_op.outreachPlaybook;
+  if(op && document.getElementById('op-headline')) {
+    document.getElementById('op-headline').textContent = op.headline;
+    document.getElementById('op-badge').textContent    = op.badge;
+    document.getElementById('op-triggers').innerHTML   = op.triggers.map(t => `
+      <div class="card" style="border-top-color:#7c3aed;">
+        <div class="card-title">${t.icon} ${t.label}</div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${t.body}</p>
+        <div style="background:#f0fdf4;border-left:3px solid #22c55e;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#166534;font-weight:600;">⚡ Action: ${t.action}</div>
+      </div>`).join('');
+    document.getElementById('op-steps').innerHTML = op.coldToWarm.map(s => `
+      <div style="display:flex;gap:14px;align-items:flex-start;padding:12px 0;border-bottom:1px solid #f0f0f0;">
+        <div style="min-width:28px;height:28px;background:#7c3aed;color:#fff;border-radius:50%;display:flex;align-items:center;justify-content:center;font-size:13px;font-weight:700;">${s.step}</div>
+        <div><div style="font-size:13px;font-weight:700;color:#1a1a2e;margin-bottom:4px;">${s.label}</div>
+        <div style="font-size:12px;color:#555;line-height:1.6;">${s.body}</div></div>
+      </div>`).join('');
+    document.getElementById('pw-cards').innerHTML = d_op.partnerships.map(p => `
+      <div class="card" style="border-top-color:#0284c7;">
+        <div class="card-title">${p.name} <span class="tag">${p.type}</span> <span class="tag" style="background:#dcfce7;color:#166534;">${p.status}</span></div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;margin-bottom:10px;">${p.desc}</p>
+        <div style="background:#eff6ff;border-left:3px solid #0284c7;padding:8px 12px;border-radius:0 6px 6px 0;font-size:11.5px;color:#1e40af;font-weight:600;">🎯 Cyient Angle: ${p.angle}</div>
+      </div>`).join('');
+    document.getElementById('ev-cards').innerHTML = d_op.events.map(e => `
+      <div class="card" style="border-top-color:#d97706;">
+        <div style="display:flex;justify-content:space-between;align-items:flex-start;margin-bottom:8px;">
+          <div class="card-title" style="margin-bottom:0;">${e.name}</div>
+          <span style="font-size:12px;font-weight:700;">${e.priority}</span>
+        </div>
+        <div style="font-size:12px;color:#666;margin-bottom:6px;">📍 ${e.location} &nbsp;·&nbsp; 📅 ${e.date} &nbsp;·&nbsp; <span class="tag">${e.type}</span></div>
+        <p style="font-size:12.5px;line-height:1.7;color:#444;">${e.why}</p>
+      </div>`).join('');
+  }
+});
+</script>
+
 </body>
 </html>
